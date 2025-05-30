@@ -118,7 +118,7 @@ class CLICommands:
 
         result = self.manager.get_current_rag().generate_response(question, use_rag=not no_rag)
 
-        rag_indicator = f"🔍 RAG ({result['rag_system']})" if result["used_rag"] else f"🤖 Direct ({result['rag_system']})"
+        rag_indicator = f"RAG ({result['rag_system']})" if result["used_rag"] else f"Direct ({result['rag_system']})"
         console.print(f"\n[bold green]Response ({rag_indicator}):[/bold green]\n{result['answer']}")
 
         # Show sources if requested and available

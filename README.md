@@ -21,9 +21,9 @@ rag_cli/
 ├── rag_system.py        # Core RAG system implementation
 ├── chat_interface.py    # Interactive chat interface
 ├── cli_commands.py      # Command handlers
-├── config.py           # Configuration settings
-├── requirements.txt    # Python dependencies
-└── README.md          # This file
+├── config.py            # Configuration settings
+├── requirements.txt     # Python dependencies
+└── README.md            # This file
 ```
 
 ## Installation

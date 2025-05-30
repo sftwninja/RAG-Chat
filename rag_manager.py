@@ -12,6 +12,7 @@ from rich.console import Console
 from rich.prompt import Confirm
 from rich.table import Table
 
+from config import Config
 from rag_system import RAGSystem
 
 console = Console()
@@ -20,7 +21,7 @@ console = Console()
 class RAGManager:
     """Manages multiple RAG systems"""
 
-    def __init__(self, base_path: str = "./rag_systems", model_name: str = "mistral:7b"):
+    def __init__(self, base_path: str = "./rag_systems", model_name: str = Config.DEFAULT_LLM_MODEL):
         self.base_path = Path(base_path)
         self.base_path.mkdir(exist_ok=True)
         self.config_file = self.base_path / "config.json"
@@ -148,7 +149,7 @@ class RAGManager:
             return True
         except Exception as e:
             # Revert to previous model on error
-            self.model_name = old_model_name if 'old_model_name' in locals() else "mistral:7b"
+            self.model_name = old_model_name if 'old_model_name' in locals() else Config.DEFAULT_LLM_MODEL
             console.print(f"[red]✗[/red] Failed to set model {model_name}: {e}")
             console.print("Make sure Ollama is running and model is available:")
             console.print(f"  [bold]ollama serve[/bold]")

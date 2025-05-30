@@ -22,13 +22,15 @@ from rich.console import Console
 from rich.progress import Progress, SpinnerColumn, TextColumn
 from rich.table import Table
 
+from config import Config
+
 console = Console()
 
 
 class RAGSystem:
     """Individual RAG system for managing documents and generating responses"""
 
-    def __init__(self, name: str, db_path: str, description: str = "", model_name: str = "mistral:7b"):
+    def __init__(self, name: str, db_path: str, description: str = "", model_name: str = Config.DEFAULT_LLM_MODEL):
         self.name = name
         self.description = description
         self.db_path = db_path
