@@ -1,4 +1,4 @@
-# Multi-RAG CLI Application
+# Multi-RAG CLI
 
 A command-line application for managing multiple RAG (Retrieval-Augmented Generation) systems using Ollama with customizable models and LangChain.
 
