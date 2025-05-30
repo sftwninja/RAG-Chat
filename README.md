@@ -255,10 +255,3 @@ The application includes wrapper scripts that allow you to run commands without 
    - Add the directory containing `ragcli.bat` to your system PATH, or
    - Create a shortcut to `ragcli.bat` in a directory that's already in your PATH
 
-3. **Create command shortcuts (optional):**
-   You can create custom command shortcuts by creating additional batch files:
-   ```cmd
-   @echo off
-   ragcli.bat chat %*
-   ```
-   Save as `ragchat.bat` to quickly start chat sessions with: `ragchat`
