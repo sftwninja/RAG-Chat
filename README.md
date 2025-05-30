@@ -127,13 +127,7 @@ python main.py search "machine learning algorithms" --count 5
 ```bash
 # Query with RAG
 python main.py query "What is deep learning?"
-# Multi-RAG CLI Application
 
-## Usage
-
-### RAG System Management
-
-**Get help for RAG commands:**
 # Query without RAG (direct LLM)
 python main.py query "What is deep learning?" --no-rag
 
@@ -172,8 +166,8 @@ python main.py add coding_standards.txt
 
 # 3. Switch to business RAG
 python main.py rag load business_docs
-python main.py add quarterly_report.pdf
-python main.py add strategy_doc.docx
+python main.py add quarterly_report.txt
+python main.py add strategy_doc.txt
 
 # 4. Chat with business context
 python main.py chat
@@ -184,7 +178,7 @@ python main.py status
 
 ## Configuration
 
-The application uses sensible defaults, but you can modify `config.py` to customize:
+I tried to stick with sensible defaults, but you can modify `config.py` to customize:
 
 - Model settings (LLM and embedding models)
 - Text processing parameters (chunk size, overlap)
